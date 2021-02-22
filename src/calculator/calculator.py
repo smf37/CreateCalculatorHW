@@ -1,4 +1,9 @@
-
+from src.calculator.Addition import Addition
+from src.calculator.Subtraction import Subtraction
+from src.calculator.Division import Division
+from src.calculator.Multiplication import Multiplication
+from src.calculator.Square import Square
+from src.calculator.SquareRoot import Square_Root
 
 class Calculator:
     result = 0
@@ -22,10 +27,10 @@ class Calculator:
         self.result = Division(a, b)
         return self.result
 
-    def square(self, a, b):
-        self.result = Square(a, b)
+    def square(self, a):
+        self.result = Square(a)
         return self.result
 
-    def squareRoot(self, a, b):
-        self.result = SquareRoot(a, b)
+    def squareRoot(self, a):
+        self.result = Square_Root(a)
         return self.result
