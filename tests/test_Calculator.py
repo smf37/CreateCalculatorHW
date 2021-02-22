@@ -16,45 +16,50 @@ class CalculatorTestCase(unittest.TestCase):
 
     def test_Addition(self):
         file = Reader("testCases/Unit_Test_Addition.csv").content
-        print("test addition\n")
+        print("test addition \n")
         for row in file:
             result = float(row[2])
             self.assertEqual(self.calculator.add(row[0], row[1]), float(row[2]))
+            self.assertEqual(self.calculator.result, result)
 
     def test_Subtraction(self):
         file = Reader("testCases/Unit_Test_Subtraction.csv").content
-        print("test subtraction\n")
+        print("test subtraction \n")
         for row in file:
             result = float(row[2])
-            self.assertEqual(self.calculator.add(row[0], row[1]), float(row[2]))
+            self.assertEqual(self.calculator.subtract(row[0], row[1]), float(row[2]))
+            self.assertEqual(self.calculator.result, result)
 
     def test_Division(self):
         file = Reader("testCases/Unit_Test_Division.csv").content
-        print("test division\n")
+        print("test division \n")
         for row in file:
             result = float(row[2])
             self.assertEqual(self.calculator.division(row[0], row[1]), float(row[2]))
+            self.assertEqual(self.calculator.result, result)
 
     def test_Multiplication(self):
         file = Reader("testCases/Unit_Test_Multiplication.csv").content
-        print("test multiplication\n")
+        print("test multiplication \n")
         for row in file:
             result = float(row[2])
             self.assertEqual(self.calculator.multiply(row[0], row[1]), float(row[2]))
+            self.assertEqual(self.calculator.result, result)
 
     def test_Square(self):
         file = Reader("testCases/Unit_Test_Square.csv").content
-        print("test square\n")
+        print("test square \n")
         for row in file:
             result = float(row[1])
             self.assertEqual(self.calculator.square(row[0]), float(row[1]))
+            self.assertEqual(self.calculator.result, result)
 
     def test_Square_Root(self):
         file = Reader("testCases/Unit_Test_Square_Root.csv").content
-        print("test square root\n")
+        print("test square root \n")
         for row in file:
             result = float(row[1])
-            self.assertEqual(self.calculator.squareRoot(row[0]), float(row[1]))
+            self.assertAlmostEqual(self.calculator.squareRoot(row[0]), float(row[1]))
             self.assertAlmostEqual(self.calculator.result, result)
 
 
