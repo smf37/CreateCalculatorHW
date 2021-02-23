@@ -24,7 +24,7 @@ class Calculator:
         return self.result
 
     def division(self, a, b):
-        self.result = Division(a, b)
+        self.result = round(Division(a, b), 9)
         return self.result
 
     def square(self, a):
