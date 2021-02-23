@@ -3,4 +3,4 @@
 
 # Calc Unit Test IS218
 ## Stephen Fusco
-
+[Dockerfile running](DockerRunforHW.PNG)
